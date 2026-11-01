@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import javax.imageio.ImageIO;
 
+import java.util.logging.Logger;
 /**
  * Convierte una imagen en arte ASCII: la reduce de tamaño y sustituye cada píxel por un carácter
  * según su brillo (de "@" para lo más oscuro a espacio para lo más claro).
@@ -17,6 +18,8 @@ import javax.imageio.ImageIO;
  * @author linux
  */
 public class ImageToAscii {
+    private static final Logger LOGGER = AppLogger.get(ImageToAscii.class);
+
 
     private static final String ASCII_CHARS = "@%#*+=-:. ";
 
@@ -82,7 +85,7 @@ public class ImageToAscii {
      * @param ascii texto a imprimir
      */
     public void writeConsole(String ascii) {
-        System.out.println(ascii);
+        LOGGER.info(ascii);
     }
 
     /**

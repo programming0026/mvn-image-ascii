@@ -4,12 +4,16 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
 /**
  * Convierte {@code image.jpeg} (de resources) en arte ASCII de 100 columnas y lo guarda en {@code ascii-art.txt}.
  *
  * @author linux
  */
 public class Main {
+    private static final Logger LOGGER = AppLogger.get(Main.class);
+
 
     /**
      * Punto de entrada.
@@ -34,7 +38,7 @@ public class Main {
             img.writeFile(asciiArt);
 
         } catch (IOException | URISyntaxException ex) {
-            ex.printStackTrace(System.err);
+            LOGGER.log(Level.SEVERE, ex.getMessage(), ex);
         }
     }
 }
