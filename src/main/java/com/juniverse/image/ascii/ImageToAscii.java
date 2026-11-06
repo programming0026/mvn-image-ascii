@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * Convierte una imagen en arte ASCII: la reduce de tamaño y sustituye cada píxel por un carácter
  * según su brillo (de "@" para lo más oscuro a espacio para lo más claro).
  *
- * @author linux
+ * @author Java Universe
  */
 public class ImageToAscii {
     private static final Logger LOGGER = AppLogger.get(ImageToAscii.class);

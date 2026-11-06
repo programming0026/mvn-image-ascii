@@ -9,7 +9,7 @@ import java.util.logging.Level;
 /**
  * Convierte {@code image.jpeg} (de resources) en arte ASCII de 100 columnas y lo guarda en {@code ascii-art.txt}.
  *
- * @author linux
+ * @author Java Universe
  */
 public class Main {
     private static final Logger LOGGER = AppLogger.get(Main.class);
